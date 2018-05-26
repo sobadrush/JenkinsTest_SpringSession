@@ -1,0 +1,58 @@
+#!/bin/bash
+# batch move file to process
+
+ProjectPath=~/.jenkins/workspace/Jenkins_SpringSessionTest
+BuildSuccessWar=$ProjectPath/target/SpringSessionTest.war
+
+
+echo "==============================================================================="
+echo jenkins建置完成war檔路徑： $BuildSuccessWar
+echo "==============================================================================="
+
+
+#####
+echo "==============================================================================="
+echo "(1)刪除tomcat/webapps目錄下的war檔及解壓縮的資料夾"
+echo "==============================================================================="
+
+cd ~/桌面/testDeployOnLinuxServer/apache-tomcat-9.0.8/webapps
+echo "目前位置pwd：" 
+pwd
+rm -rf SpringSessionTest*
+echo "執行 rm -rf SpringSessionTest* "
+
+#####
+echo "==============================================================================="
+echo "(2)複製war檔到tomcat/webapps目錄"
+echo "==============================================================================="
+
+echo "目前位置pwd：" 
+cd ~/.jenkins/workspace/Jenkins_SpringSessionTest/target
+pwd
+echo "執行 cp war檔"
+cp SpringSessionTest.war ~/桌面/testDeployOnLinuxServer/apache-tomcat-9.0.8/webapps/
+ls
+
+
+#####
+#echo "==============================================================================="
+#echo "(3)停止tomcat"
+#echo "==============================================================================="
+
+#cd ~/桌面/testDeployOnLinuxServer/apache-tomcat-9.0.8/bin
+#echo "目前位置pwd：" 
+#pwd 
+#sh shutdown.sh
+
+
+#####
+#echo "==============================================================================="
+#echo "(4)啟動tomcat"
+#echo "==============================================================================="
+
+#cd ~/桌面/testDeployOnLinuxServer/apache-tomcat-9.0.8/bin
+#echo "目前位置pwd：" 
+#pwd 
+#sh startup.sh
+
+
