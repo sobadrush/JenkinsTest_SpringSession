@@ -1,0 +1,10 @@
+
+[從Windows發到此URL]
+http://192.168.75.131:18080/SpringSessionTest/login.jsp
+
+[因為DB設在windows上,記得SpringBean配置的DriverManagerDatasource要改連線字串的IP]
+
+[之後看是要關閉windows上的防火牆,或是將此linuxServer的IP加到windows的防火牆例外]
+
+
+

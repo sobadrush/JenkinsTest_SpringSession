@@ -1,0 +1,3 @@
+
+[查看tomcat (server log)]
+ tail -f /home/whoismvp/桌面/testDeployOnLinuxServer/apache-tomcat-9.0.8/logs/catalina.out
