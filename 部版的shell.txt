@@ -6,51 +6,51 @@ BuildSuccessWar=$ProjectPath/target/SpringSessionTest.war
 
 
 echo "==============================================================================="
-echo jenkins«Ø¸m§¹¦¨warÀÉ¸ô®|¡G $BuildSuccessWar
+echo jenkinså»ºç½®å®Œæˆwaræª”è·¯å¾‘ï¼š $BuildSuccessWar
 echo "==============================================================================="
 
 #####
 echo "==============================================================================="
-echo "(1)°±¤îtomcat"
+echo "(1)åœæ­¢tomcat"
 echo "==============================================================================="
 
-cd ~/®à­±/myWarServerTomcat9/bin
-echo "¥Ø«e¦ì¸mpwd¡G" 
+cd ~/æ¡Œé¢/myWarServerTomcat9/bin
+echo "ç›®å‰ä½ç½®pwdï¼š" 
 pwd 
 sh shutdown.sh
 
 #####
 echo "==============================================================================="
-echo "(2)§R°£tomcat/webapps¥Ø¿ı¤UªºwarÀÉ¤Î¸ÑÀ£ÁYªº¸ê®Æ§¨"
+echo "(2)åˆªé™¤tomcat/webappsç›®éŒ„ä¸‹çš„waræª”åŠè§£å£“ç¸®çš„è³‡æ–™å¤¾"
 echo "==============================================================================="
 
-cd ~/®à­±/myWarServerTomcat9/webapps
-echo "¥Ø«e¦ì¸mpwd¡G" 
+cd ~/æ¡Œé¢/myWarServerTomcat9/webapps
+echo "ç›®å‰ä½ç½®pwdï¼š" 
 pwd
 rm -rf SpringSessionTest*
-echo "°õ¦æ rm -rf SpringSessionTest* "
+echo "åŸ·è¡Œ rm -rf SpringSessionTest* "
 
 #####
 echo "==============================================================================="
-echo "(3)½Æ»swarÀÉ¨ìtomcat/webapps¥Ø¿ı"
+echo "(3)è¤‡è£½waræª”åˆ°tomcat/webappsç›®éŒ„"
 echo "==============================================================================="
 
 cd ~/.jenkins/workspace/Jenkins_SpringSessionTest/target
-echo "¥Ø«e¦ì¸mpwd¡G" 
+echo "ç›®å‰ä½ç½®pwdï¼š" 
 pwd
-echo "°õ¦æ cp warÀÉ"
-cp SpringSessionTest.war ~/®à­±/myWarServerTomcat9/webapps/
+echo "åŸ·è¡Œ cp waræª”"
+cp SpringSessionTest.war ~/æ¡Œé¢/myWarServerTomcat9/webapps/
 ls
 
 
 #####
 echo "==============================================================================="
-echo "(4)±Ò°Êtomcat, Á×§Kjenkins¦b?¥»°õ¦æ§¹«á§â?¥»­l¥Íªºµ{§Ç³£kill±¼, ¥[¤JBUILD_ID"
+echo "(4)å•Ÿå‹•tomcat, é¿å…jenkinsåœ¨è…³æœ¬åŸ·è¡Œå®Œå¾ŒæŠŠè…³æœ¬è¡ç”Ÿçš„ç¨‹åºéƒ½killæ‰, åŠ å…¥BUILD_ID"
 echo "==============================================================================="
 
 BUILD_ID=DontKillMeFuck
-cd ~/®à­±/myWarServerTomcat9/bin
-echo "¥Ø«e¦ì¸mpwd¡G" 
+cd ~/æ¡Œé¢/myWarServerTomcat9/bin
+echo "ç›®å‰ä½ç½®pwdï¼š" 
 pwd
 sh startup.sh
 echo "==============================================================================="
